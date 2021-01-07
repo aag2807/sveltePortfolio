@@ -27,8 +27,8 @@
     </div>
     <CardText class="text-center">{content}</CardText>
     <div class="btn-box">
-      <CardActions>
-        <Button class="orange-text text-darken-4" rounded outlined>
+      <CardActions style='width:100%;'>
+        <Button class="orange-text text-darken-4" depressed block >
           {btnContent}
         </Button>
       </CardActions>
