@@ -1,9 +1,8 @@
 <script>
-  import HomeCard from './HomeCard.svelte'
+  import HomeCard from "./HomeCard.svelte";
 </script>
 
 <style>
-
   img {
     max-width: 100%;
     max-height: 100%;
@@ -26,7 +25,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
   }
 
   @media screen and (max-width: 600px) {
@@ -34,7 +32,6 @@
       display: none;
     }
   }
-
 </style>
 
 <!-- markup (zero or more items) goes here -->
@@ -47,18 +44,24 @@
 <div class="box-s">
   <div class="temp">
     <HomeCard 
-      overline='Full-Stack'
-      headline='Front-End'
+      overline="Full-Stack" 
+      headline="Front-End" 
+      content='Javascript<br>Nerd'
+      url={'/projects'}
     />
   </div>
   <!-- image -->
-  <img src="images/drawkit-full-stack-man-monochrome-400px.png" width="450px" alt="" />
+  <img
+    src="images/drawkit-full-stack-man-monochrome-400px.png"
+    width="450px"
+    alt="" />
   <!-- / image -->
   <div class="temp">
     <HomeCard 
-      overline='Full-Stack'
-      headline='Back-End'  
-    />
+      overline="Full-Stack" 
+      headline="Back- End"
+      content='Programmer<br>language Fan'
+      url={'/projects'}
+      />
   </div>
 </div>
-

@@ -10,6 +10,7 @@
     CardSubtitle,
     Icon,
   } from "svelte-materialify";
+  import { link } from  'svelte-spa-router'
 
   import Divider from "../utils/Divider.svelte";
 </script>
@@ -31,7 +32,7 @@
     display: none;
   }
 
-  .dt{
+  .dt {
     display: block;
   }
 
@@ -40,10 +41,9 @@
       display: block;
     }
 
-    .dt{
+    .dt {
       display: none;
     }
-
   }
 </style>
 
@@ -56,142 +56,142 @@
 
   -->
 <div class="mb">
-  <h3 class='text-h3 text-center'>Projects</h3>
-    <Col>
-      <Card class="blue-grey darken-4 grey-text text-lighten-5">
-        <Row>
-          <Col class="ml-2">
-            <CardTitle>Insta-Vue</CardTitle>
-            <CardSubtitle />
-            <CardActions>
-              <Button outlined class="green">More</Button>
-            </CardActions>
-          </Col>
-          <Col>
-            <p>A minimalistic Instagram clone</p>
-            <p>
-              made with:<br />
-              <Chip class="green lighten-2">Vue</Chip>
-              <Chip class="red lighten-1">Firebase</Chip>
-              <Chip class="green">Quasar</Chip>
-            </p>
-          </Col>
-        </Row>
-      </Card>
-    
-      <Divider />
-    
-      <Card class="blue-grey darken-4 grey-text text-lighten-5">
-        <Row>
-          <Col class="ml-2">
-            <CardTitle>Vanilla.js SPA</CardTitle>
-            <CardSubtitle />
-            <CardActions>
-              <Button
-                outlined
-                style="font-family: inherit;"
-                class="yellow accent-5">
-                More
-              </Button>
-            </CardActions>
-          </Col>
-          <Col>
-            <p>A frameworkless SPA</p>
-            <p>
-              made with:<br />
-              <Chip class="orange darken-2">Jquery</Chip>
-              <Chip class="amber darken-1">Handlebars</Chip>
-            </p>
-          </Col>
-        </Row>
-      </Card>
-    
-      <Divider />
-    
-      <Card class="blue-grey darken-4 grey-text text-lighten-5">
-        <Row>
-          <Col class="ml-2">
-            <CardTitle>E-commerce React</CardTitle>
-            <CardSubtitle />
-            <CardActions>
-              <Button
-                outlined
-                style="font-family: inherit;"
-                class="light-blue darken-4">
-                More
-              </Button>
-            </CardActions>
-          </Col>
-          <Col>
-            <p>React Slack Chat clone</p>
-            <p>
-              made with:<br />
-              <Chip class="light-blue darken-1">React</Chip>
-              <Chip class="light-blue darken-3">CommerceJs</Chip>
-              <Chip class="grey darken-2">Material Ui React</Chip>
-            </p>
-          </Col>
-        </Row>
-      </Card>
-    
-      <Divider />
-    
-      <Card class="blue-grey darken-4 grey-text text-lighten-5">
-        <Row>
-          <Col class="ml-2">
-            <CardTitle>Rack Chat</CardTitle>
-            <CardSubtitle />
-            <CardActions>
-              <Button
-                outlined
-                style="font-family: inherit;"
-                class="light-blue darken-4">
-                More
-              </Button>
-            </CardActions>
-          </Col>
-          <Col>
-            <p>React Slack Chat clone</p>
-            <p>
-              made with:<br />
-              <Chip class="red lighten-1">Firebase</Chip>
-              <Chip class="light-blue darken-1">React</Chip>
-              <Chip class="grey lighten-1">Semantic Ui React</Chip>
-            </p>
-          </Col>
-        </Row>
-      </Card>
-    
-      <Divider />
-    
-      <Card class="blue-grey darken-4 grey-text text-lighten-5">
-        <Row>
-          <Col class="ml-2">
-            <CardTitle>Svelte<br> Portfolio</CardTitle>
-            <CardSubtitle />
-            <CardActions>
-              <Button outlined class="yellow darken-4">More</Button>
-            </CardActions>
-          </Col>
-          <Col>
-            <p>A minimalistic Whatsapp clone</p>
-            <p>
-              made with:<br />
-              <Chip class="green lighten-2">Vue</Chip>
-              <Chip class="red lighten-1">Firebase</Chip>
-              <Chip class="green">Quasar</Chip>
-            </p>
-          </Col>
-        </Row>
-      </Card>
-      <Divider />
-    </Col> 
+  <h3 class="text-h3 text-center">Projects</h3>
+  <Col>
+    <Card class="blue-grey darken-4 grey-text text-lighten-5">
+      <Row>
+        <Col class="ml-2">
+          <CardTitle>Insta-Vue</CardTitle>
+          <CardSubtitle />
+          <CardActions>
+            <Button outlined class="green">More</Button>
+          </CardActions>
+        </Col>
+        <Col>
+          <p>A minimalistic Instagram clone</p>
+          <p>
+            made with:<br />
+            <Chip class="green lighten-2">Vue</Chip>
+            <Chip class="red lighten-1">Firebase</Chip>
+            <Chip class="green">Quasar</Chip>
+          </p>
+        </Col>
+      </Row>
+    </Card>
+
+    <Divider />
+
+    <Card class="blue-grey darken-4 grey-text text-lighten-5">
+      <Row>
+        <Col class="ml-2">
+          <CardTitle>Vanilla.js SPA</CardTitle>
+          <CardSubtitle />
+          <CardActions>
+            <Button
+              outlined
+              style="font-family: inherit;"
+              class="yellow accent-5">
+              More
+            </Button>
+          </CardActions>
+        </Col>
+        <Col>
+          <p>A frameworkless SPA</p>
+          <p>
+            made with:<br />
+            <Chip class="orange darken-2">Jquery</Chip>
+            <Chip class="amber darken-1">Handlebars</Chip>
+          </p>
+        </Col>
+      </Row>
+    </Card>
+
+    <Divider />
+
+    <Card class="blue-grey darken-4 grey-text text-lighten-5">
+      <Row>
+        <Col class="ml-2">
+          <CardTitle>E-commerce React</CardTitle>
+          <CardSubtitle />
+          <CardActions>
+            <Button
+              outlined
+              style="font-family: inherit;"
+              class="light-blue darken-4">
+              More
+            </Button>
+          </CardActions>
+        </Col>
+        <Col>
+          <p>React Slack Chat clone</p>
+          <p>
+            made with:<br />
+            <Chip class="light-blue darken-1">React</Chip>
+            <Chip class="light-blue darken-3">CommerceJs</Chip>
+            <Chip class="grey darken-2">Material Ui React</Chip>
+          </p>
+        </Col>
+      </Row>
+    </Card>
+
+    <Divider />
+
+    <Card class="blue-grey darken-4 grey-text text-lighten-5">
+      <Row>
+        <Col class="ml-2">
+          <CardTitle>Rack Chat</CardTitle>
+          <CardSubtitle />
+          <CardActions>
+            <Button
+              outlined
+              style="font-family: inherit;"
+              class="light-blue darken-4">
+              More
+            </Button>
+          </CardActions>
+        </Col>
+        <Col>
+          <p>React Slack Chat clone</p>
+          <p>
+            made with:<br />
+            <Chip class="red lighten-1">Firebase</Chip>
+            <Chip class="light-blue darken-1">React</Chip>
+            <Chip class="grey lighten-1">Semantic Ui React</Chip>
+          </p>
+        </Col>
+      </Row>
+    </Card>
+
+    <Divider />
+
+    <Card class="blue-grey darken-4 grey-text text-lighten-5">
+      <Row>
+        <Col class="ml-2">
+          <CardTitle>Svelte<br /> Portfolio</CardTitle>
+          <CardSubtitle />
+          <CardActions>
+            <Button outlined class="yellow darken-4">More</Button>
+          </CardActions>
+        </Col>
+        <Col>
+          <p>A minimalistic Whatsapp clone</p>
+          <p>
+            made with:<br />
+            <Chip class="green lighten-2">Vue</Chip>
+            <Chip class="red lighten-1">Firebase</Chip>
+            <Chip class="green">Quasar</Chip>
+          </p>
+        </Col>
+      </Row>
+    </Card>
+    <Divider />
+  </Col>
 </div>
 
 <div class="dt">
   <Row>
     <Col>
-      <h3 class='text-h3 text-center'>Front-End</h3>
+      <h3 class="text-h3 text-center">Front-End</h3>
       <Divider />
       <Card class="blue-grey darken-4 grey-text text-lighten-5">
         <Row>
@@ -199,7 +199,11 @@
             <CardTitle>Insta-Vue</CardTitle>
             <CardSubtitle />
             <CardActions>
-              <Button outlined class="green">More</Button>
+              <Button outlined class="green">
+                <a target="_blank" href="https://github.com/aag2807/Insta-Vue">
+                  More
+                </a>
+              </Button>
             </CardActions>
           </Col>
           <Col>
@@ -213,9 +217,9 @@
           </Col>
         </Row>
       </Card>
-    
+
       <Divider />
-    
+
       <Card class="blue-grey darken-4 grey-text text-lighten-5">
         <Row>
           <Col class="ml-2">
@@ -226,7 +230,9 @@
                 outlined
                 style="font-family: inherit;"
                 class="yellow accent-5">
-                More
+                <a target="_blank" href="https://github.com/aag2807/Frameworkless">
+                  More
+                </a>
               </Button>
             </CardActions>
           </Col>
@@ -240,9 +246,9 @@
           </Col>
         </Row>
       </Card>
-    
+
       <Divider />
-    
+
       <Card class="blue-grey darken-4 grey-text text-lighten-5">
         <Row>
           <Col class="ml-2">
@@ -253,12 +259,14 @@
                 outlined
                 style="font-family: inherit;"
                 class="light-blue darken-4">
-                More
+                <a target="_blank" href="https://github.com/aag2807/EcommerceReact">
+                  More
+                </a>
               </Button>
             </CardActions>
           </Col>
           <Col>
-            <p>React Slack Chat clone</p>
+            <p>A React material ui Simple e-commerce with stripe</p>
             <p>
               made with:<br />
               <Chip class="light-blue darken-1">React</Chip>
@@ -268,9 +276,9 @@
           </Col>
         </Row>
       </Card>
-    
+
       <Divider />
-    
+
       <Card class="blue-grey darken-4 grey-text text-lighten-5">
         <Row>
           <Col class="ml-2">
@@ -281,7 +289,9 @@
                 outlined
                 style="font-family: inherit;"
                 class="light-blue darken-4">
+                <a target='_blank' href="https://github.com/aag2807/react-slack-clone">
                 More
+              </a>
               </Button>
             </CardActions>
           </Col>
@@ -296,20 +306,24 @@
           </Col>
         </Row>
       </Card>
-    
+
       <Divider />
-    
+
       <Card class="blue-grey darken-4 grey-text text-lighten-5">
         <Row>
           <Col class="ml-2">
             <CardTitle>Vue-C</CardTitle>
             <CardSubtitle />
             <CardActions>
-              <Button outlined class="green">More</Button>
+              <Button outlined class="green">
+                <a href="https://github.com/aag2807/vue-c" target='_blank'>
+                More
+                </a>
+              </Button>
             </CardActions>
           </Col>
           <Col>
-            <p>A minimalistic Whatsapp clone</p>
+            <p> Whatsapp clone trying Quasar</p>
             <p>
               made with:<br />
               <Chip class="green lighten-2">Vue</Chip>
@@ -319,30 +333,36 @@
           </Col>
         </Row>
       </Card>
+
       <Divider />
+
       <Card class="blue-grey darken-4 grey-text text-lighten-5">
         <Row>
           <Col class="ml-2">
-            <CardTitle>Svelte<br> Portfolio</CardTitle>
+            <CardTitle>Svelte<br /> Portfolio</CardTitle>
             <CardSubtitle />
             <CardActions>
-              <Button outlined class="yellow darken-4">More</Button>
+              <Button outlined class="yellow darken-4">
+                <a href='/' use:link>
+                  Home
+                </a>
+              </Button>
             </CardActions>
           </Col>
           <Col>
-            <p>A minimalistic Whatsapp clone</p>
+            <p>You're on it right now.</p>
             <p>
               made with:<br />
-              <Chip class="green lighten-2">Vue</Chip>
-              <Chip class="red lighten-1">Firebase</Chip>
-              <Chip class="green">Quasar</Chip>
+              <Chip class="amber darken-2">Svelte</Chip>
+              <Chip class="red lighten-1">Svelte-SPA-Router</Chip>
+              <Chip class="indigo darken-1">Svelte-Materialify</Chip>
             </p>
           </Col>
         </Row>
       </Card>
-    </Col> 
+    </Col>
     <Col>
-      <h3 class='text-h3 text-center'>Back-End</h3>
+      <h3 class="text-h3 text-center">Back-End</h3>
       <Divider />
       <Card class="blue-grey darken-4 grey-text text-lighten-5">
         <Row>
@@ -365,9 +385,9 @@
           </Col>
         </Row>
       </Card>
-    
+
       <Divider />
-    
+
       <Card class="blue-grey darken-4 grey-text text-lighten-5">
         <Row>
           <Col class="ml-2">
@@ -391,13 +411,13 @@
           </Col>
         </Row>
       </Card>
-    
+
       <Divider />
-    
+
       <Card class="blue-grey darken-4 grey-text text-lighten-5">
         <Row>
           <Col class="ml-2">
-            <CardTitle>MERN template</CardTitle>
+            <CardTitle>MERN<br />template</CardTitle>
             <CardSubtitle />
             <CardActions>
               <Button
@@ -419,9 +439,9 @@
           </Col>
         </Row>
       </Card>
-    
+
       <Divider />
-    
+
       <Card class="blue-grey darken-4 grey-text text-lighten-5">
         <Row>
           <Col class="ml-2">
@@ -437,35 +457,32 @@
             </CardActions>
           </Col>
           <Col>
-            <p>React Slack Chat clone</p>
+            <p>A simple Api using snap</p>
             <p>
               made with:<br />
-              <Chip class="red lighten-1">Firebase</Chip>
-              <Chip class="light-blue darken-1">React</Chip>
-              <Chip class="grey lighten-1">Semantic Ui React</Chip>
+              <Chip class="light-blue darken-3">Snap</Chip>
+              <Chip class="grey darken-1">Snap Templates</Chip>
             </p>
           </Col>
         </Row>
       </Card>
-    
+
       <Divider />
-    
+
       <Card class="blue-grey darken-4 grey-text text-lighten-5">
         <Row>
           <Col class="ml-2">
-            <CardTitle>Rust microservice</CardTitle>
+            <CardTitle>Rust Api</CardTitle>
             <CardSubtitle />
             <CardActions>
               <Button outlined class="green">More</Button>
             </CardActions>
           </Col>
           <Col>
-            <p>A minimalistic Whatsapp clone</p>
+            <p>A Simple rust Api created to expand my web tools.</p>
             <p>
               made with:<br />
-              <Chip class="green lighten-2">Vue</Chip>
-              <Chip class="red lighten-1">Firebase</Chip>
-              <Chip class="green">Quasar</Chip>
+              <Chip class="orange darken-4">Tokio</Chip>
             </p>
           </Col>
         </Row>
@@ -475,23 +492,22 @@
       <Card class="blue-grey darken-4 grey-text text-lighten-5">
         <Row>
           <Col class="ml-2">
-            <CardTitle>RoR microservice</CardTitle>
+            <CardTitle>RoR<br />microservice</CardTitle>
             <CardSubtitle />
             <CardActions>
               <Button outlined class="green">More</Button>
             </CardActions>
           </Col>
           <Col>
-            <p>A minimalistic Whatsapp clone</p>
+            <p>Ruby on Rails Microservice.</p>
             <p>
               made with:<br />
-              <Chip class="green lighten-2">Vue</Chip>
-              <Chip class="red lighten-1">Firebase</Chip>
-              <Chip class="green">Quasar</Chip>
+              <Chip class="red darken-2">Ruby on Rails</Chip>
+              <Chip class="red darken-1">Action Cable</Chip>
             </p>
           </Col>
         </Row>
       </Card>
-    </Col> 
+    </Col>
   </Row>
 </div>

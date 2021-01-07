@@ -1,11 +1,13 @@
 <script>
   import { Card, CardText, CardActions, Button } from "svelte-materialify/src";
+  import {link} from 'svelte-spa-router'
 
   //props
   export let overline = "overline";
   export let headline = "title";
   export let content = "content";
   export let btnContent = "Click";
+  export let url = "/";
 </script>
 
 <style>
@@ -25,11 +27,11 @@
       <span class="text-h5 mb-2">{headline}</span>
       <br />
     </div>
-    <CardText class="text-center">{content}</CardText>
+    <CardText class="text-center">{@html content}</CardText>
     <div class="btn-box">
       <CardActions style='width:100%;'>
         <Button class="orange-text text-darken-4" depressed block >
-          {btnContent}
+          <a use:link={url}>{btnContent}</a>
         </Button>
       </CardActions>
     </div>
