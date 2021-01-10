@@ -1,4 +1,7 @@
 <script lang="ts">
+  import { fade } from "svelte/transition";
+  import { linear } from "svelte/easing";
+
   import { Card, CardText, CardActions, Button } from 'svelte-materialify/src';
   import axios from "axios";
   import { onMount } from "svelte";
@@ -11,10 +14,11 @@
     overlay: string;
   }
 
-  let info = [];
+  let info:IAbout[] = [];
   let loading = true;
   let error = false;
   let clicked = false
+
   onMount(async () => {
     try {
       const { data } = await axios.get("http://localhost:3000/about");
@@ -29,6 +33,9 @@
   const hideCard =() => clicked = !clicked
 
   $: hidden = clicked ? 'none' : '';
+
+  const options = { duration: 1000, easing: linear };
+
 </script>
 
 <style lang="scss">
@@ -226,25 +233,23 @@
 {#if loading}
   <Loader />
 {:else if error && !loading || error && loading}
-  
-<div class="d-flex justify-center mt-4 mb-4 " style="display:{hidden}">
-  <Card outlined style="max-width:300px; color: white;" class='red text-center'>  
-    <div class="pl-4 pr-4 pt-3">
-      <span class="text-overline"> OVERLINE </span>
-      <br />
-      <span class="text-h5 mb-2">Headline</span>
-      <br />
+  <div transition:fade={options}>
+    <div class="d-flex justify-center mt-4 mb-4"  style="display:{hidden}">
+      <Card outlined style="max-width:300px; color: white;" class='deep-purple lighten-2 text-center'>  
+        <div class="pl-4 pr-4 pt-3">
+          <br />
+          <span class="text-h4 mb-2">ERROR</span>
+          <br />
+        </div>
+        <CardText class='text-center'>
+          Seems there was an issue with the backend.
+        </CardText >
+          <CardActions>
+            <Button class='' rounded outlined on:click={hideCard} >OK</Button>
+          </CardActions>
+      </Card>
     </div>
-    <CardText>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, qui quaerat
-      rerum incidunt nisi ducimus?
-    </CardText>
-      <CardActions>
-        <Button rounded outlined on:click={hideCard} >Button</Button>
-        <Button rounded outlined>Button</Button>
-      </CardActions>
-  </Card>
-</div>
+  </div>
 {:else}
   <div class="box">
     {#each info as data (data.id)}

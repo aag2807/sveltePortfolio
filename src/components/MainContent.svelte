@@ -75,7 +75,7 @@ import Divider from "../utils/Divider.svelte";
       “Imagination is more 
     </div>
     <div class="block-reveal" style="--bc: #673ab7; --d: .5s">
-      import than knowledge."
+      important than knowledge."
     </div>
   </h1>
 </div>
