@@ -1,8 +1,13 @@
 <script>
-  import Hero from "../components/Hero.svelte";
-import Laptop from "../components/Laptop.svelte";
-import LargeCard from "../components/LargeCard.svelte";
+  import { fade } from "svelte/transition";
+  import { linear } from "svelte/easing";
+
+  import Laptop from "../components/Laptop.svelte";
+  import LargeCard from "../components/LargeCard.svelte";
   import MainContent from "../components/MainContent.svelte";
+
+  const options = { duration: 1000, easing: linear };
+
 </script>
 
 <style>
@@ -15,9 +20,10 @@ import LargeCard from "../components/LargeCard.svelte";
   }
 </style>
 
-
-<Laptop />
-<MainContent />
-<div class="me">
-  <LargeCard />
+<div transition:fade={options}>
+  <Laptop />
+  <MainContent />
+  <div class="me">
+    <LargeCard />
+  </div>
 </div>

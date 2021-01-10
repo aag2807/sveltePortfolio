@@ -6,8 +6,8 @@
 
   const links = [
     {path:"/", to:"Home"},
-    {path:"/contact", to:"Contact"},
     {path:"/projects", to:"Project"},
+    {path:"/contact", to:"Contact"},
   ];
 
 </script>

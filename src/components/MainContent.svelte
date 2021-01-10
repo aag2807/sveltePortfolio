@@ -1,36 +1,12 @@
 <script>
-  // your script goes here
-
 import Divider from "../utils/Divider.svelte";
 
 </script>
 
 <style>
-
- 
-  *,
-  *::before,
-  *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-
-  /* other */
-  .info {
-    margin: 20px 0;
-    text-align: center;
-  }
-
-  p {
-    color: #2e2e2e;
-    margin-bottom: 20px;
-  }
-
   /* block-$ */
   .block-effect {
-    font-size: calc(8px + 6vw);
+    font-size: calc(8px + 5vw);
   }
 
   .block-reveal {
@@ -88,13 +64,6 @@ import Divider from "../utils/Divider.svelte";
     }
   }
 
-  .abs-site-link {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    color: hsla(0, 0%, 0%, 0.6);
-    font-size: 16px;
-  }
 
 </style>
 

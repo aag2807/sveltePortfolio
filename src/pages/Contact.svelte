@@ -19,6 +19,7 @@
 
   img {
     max-width: 400px;
+    width: 300px;
   }
 
   .p {
