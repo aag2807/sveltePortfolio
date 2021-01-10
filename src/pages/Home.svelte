@@ -1,5 +1,6 @@
 <script>
   import Hero from "../components/Hero.svelte";
+import Laptop from "../components/Laptop.svelte";
 import LargeCard from "../components/LargeCard.svelte";
   import MainContent from "../components/MainContent.svelte";
 </script>
@@ -15,7 +16,7 @@ import LargeCard from "../components/LargeCard.svelte";
 </style>
 
 
-<Hero />
+<Laptop />
 <MainContent />
 <div class="me">
   <LargeCard />

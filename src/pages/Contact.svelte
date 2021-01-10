@@ -1,7 +1,11 @@
 <script>
-  // your script goes here
-
+  import { fade } from "svelte/transition";
+  import { linear } from "svelte/easing";
   import Form from "../components/Form.svelte";
+
+  const options = { duration: 1000, easing: linear };
+
+
 </script>
 
 <style lang="scss">
@@ -29,13 +33,15 @@
   }
 </style>
 
-<!-- markup (zero or more items) goes here -->
 
-<div class="container flex">
-  <img src="images/student-colour-800px.png" alt="" />
-  <h4 class="text-h4 text-center">Pitch <span class="p">me</span> an Idea</h4>
+<!-- markup (zero or more items) goes here -->
+<div transition:fade={options}>
+  <div class="container flex">
+    <img src="images/student-colour-800px.png" alt="" />
+    <h4 class="text-h4 text-center">Pitch <span class="p">me</span> an Idea</h4>
+  </div>
+  <div class="text-center">
+    <div class="subtitle-1">I would love to hear from you.</div>
+  </div>
+  <Form />
 </div>
-<div class="text-center">
-  <div class="subtitle-1">I would love to hear from you.</div>
-</div>
-<Form />

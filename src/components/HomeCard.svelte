@@ -31,6 +31,7 @@
     <div class="btn-box">
       <CardActions style='width:100%;'>
         <Button class="orange-text text-darken-4" depressed block >
+          <!-- svelte-ignore a11y-missing-attribute -->
           <a use:link={url}>{btnContent}</a>
         </Button>
       </CardActions>

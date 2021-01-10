@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Router from "svelte-spa-router";
+
 	import { Container } from 'svelte-materialify'
 	//component imports
 	import Navbar from "./components/Navbar.svelte";
@@ -11,12 +12,18 @@
 </script>
 
 <style lang="scss">
+
+	main {
+		width:100%;
+		max-width:100%;
+	}
 </style>
 
 
 <main>
 	<Navbar />
 	<Divider />
+
 	<Container>
 		<Router {routes} />
 	</Container>
