@@ -21,7 +21,7 @@
 
   onMount(async () => {
     try {
-      const { data } = await axios.get("hhttps://intense-ravine-59043.herokuapp.com/about");
+      const { data } = await axios.get("https://intense-ravine-59043.herokuapp.com/about");
       info = data;
       loading = false;
     } catch (e) {
