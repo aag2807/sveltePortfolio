@@ -5,13 +5,13 @@
   import ProjectContainer from "../components/ProjectContainer.svelte";
   import Divider from "../utils/Divider.svelte";
 
-  const options = {duration: 1000, easing: linear}
+  const options = { duration: 1000, easing: linear };
 </script>
 
 <style>
   img {
-    max-width: 100%;
-    width: 100%;
+    max-width: 400px;
+    width: 400px;
   }
 
   .box {

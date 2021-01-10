@@ -4,8 +4,6 @@
   import Form from "../components/Form.svelte";
 
   const options = { duration: 1000, easing: linear };
-
-
 </script>
 
 <style lang="scss">
@@ -33,7 +31,6 @@
     flex-direction: column;
   }
 </style>
-
 
 <!-- markup (zero or more items) goes here -->
 <div transition:fade={options}>

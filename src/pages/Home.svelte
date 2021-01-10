@@ -6,8 +6,8 @@
   import LargeCard from "../components/LargeCard.svelte";
   import MainContent from "../components/MainContent.svelte";
 
-  const options = { duration: 1000, easing: linear };
 
+  const options = { duration: 1000, easing: linear };
 </script>
 
 <style>
