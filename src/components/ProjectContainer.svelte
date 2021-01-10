@@ -22,12 +22,12 @@
   let backend = [];
 
   async function getFront() {
-    const { data } = await axios.get("http://localhost:3000/projects/front");
+    const { data } = await axios.get("https://intense-ravine-59043.herokuapp.com/projects/front");
     frontend = [...data];
   }
 
   async function getBack() {
-    const { data } = await axios.get("http://localhost:3000/projects/back");
+    const { data } = await axios.get("https://intense-ravine-59043.herokuapp.com/projects/back");
     backend = [...data];
   }
 
