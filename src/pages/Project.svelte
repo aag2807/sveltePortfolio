@@ -24,8 +24,11 @@
 </style>
 
 <!-- markup (zero or more items) goes here -->
-<div transition:fade={options} class="box">
-  <img src="images/undraw_Browser_stats_re_j7wy.png" alt="projects" />
+<div class=''>
+  <div transition:fade={options} class="box">
+    <img src="images/undraw_Browser_stats_re_j7wy.png" alt="projects" />
+  </div>
+  <Divider />
+  <ProjectContainer />
 </div>
-<Divider />
-<ProjectContainer />
+
